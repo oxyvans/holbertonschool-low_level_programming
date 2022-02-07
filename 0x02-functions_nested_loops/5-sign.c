@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - puts funcion
+ * print_sing - puts funcion
  * @n : n int
  * Return: Always 0 (Success)
  */
