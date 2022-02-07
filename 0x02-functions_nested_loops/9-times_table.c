@@ -17,10 +17,8 @@ c = a * b;
 if (c < 10)
 {
 if (b != 0)
-{
 _putchar(' ');
 _putchar((c % 10) + '0');
-}
 }
 else
 {
