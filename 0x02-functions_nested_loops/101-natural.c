@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * suma_multiplos - Entry point
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
 
-int suma_multiplos(void)
+int main(void)
 {
 int n, res;
 res = 0;
