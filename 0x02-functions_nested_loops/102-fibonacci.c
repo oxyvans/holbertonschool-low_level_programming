@@ -8,20 +8,20 @@
 
 int main(void)
 {
-int i = 1;
-int anterior = 1;
-int aux;
+long int i = 1;
+long int anterior = 1;
+long int aux;
 int cont = 1;
-printf("%d, ", i);
+printf("%ld, ", i);
 i = 2;
 while (cont < 49)
 {
-printf("%d, ", i);
+printf("%ld, ", i);
 aux = i;
 i = i + anterior;
 anterior = aux;
 cont++;
 }
-printf("%d\n", i);
+printf("%ld\n", i);
 return (0);
 }
