@@ -11,7 +11,7 @@
 
 int _atoi(char *s)
 {
-  unsinged int res = 0;
+  unsigned int res = 0;
   bool flag = false;
   int i, j, signo;
   i = _strlen(s);
@@ -21,7 +21,7 @@ int _atoi(char *s)
   for (j = 0; j < i; j++)
     {
       if(s[j] == 45)
-	signo = (signo * -1)
+	signo = (signo * -1);
 
 	while (s[j] >= 48 && s[j] <= 57)
 	{
