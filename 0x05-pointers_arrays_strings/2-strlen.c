@@ -4,7 +4,7 @@
  * _strlen - strlen
  * @s : char
  *
- * Return:
+ * Return: return size
  */
 
 int _strlen(char *s)
