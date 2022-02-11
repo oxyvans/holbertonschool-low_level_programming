@@ -5,7 +5,7 @@
  * _strcpy - main
  * @dest : chars
  * @src : chars
- * Return : dest
+ * Return: dest
  */
 
 char *_strcpy(char *dest, char *src)
