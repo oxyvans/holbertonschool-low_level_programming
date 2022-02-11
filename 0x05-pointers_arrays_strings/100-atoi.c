@@ -20,17 +20,18 @@ int _atoi(char *s)
 
   for (j = 0; j < i; j++)
     {
-      if(s[j] == '-')
+      if(s[j] == '-'){
 	signo = (signo * -1);
-
+      }
 	while (s[j] >= 48 && s[j] <= 57)
 	{
 	 flag = true;
 	 res = (res * 10) + (s[j] - '0');
 	}
 
-      if (flag)
+	if (flag){
 	break;
+	}
     }
   return (res * signo);
 }
