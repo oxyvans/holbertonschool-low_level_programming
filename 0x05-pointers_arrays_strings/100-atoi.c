@@ -32,5 +32,5 @@ int _atoi(char *s)
       if (flag)
 	break;
     }
-  return (res * signo):
+  return (res * signo);
 }
