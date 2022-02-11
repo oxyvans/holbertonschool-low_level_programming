@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-srtlen.c"
 #include <stdio.h>
 
 /**
