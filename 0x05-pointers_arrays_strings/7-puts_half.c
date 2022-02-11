@@ -15,7 +15,7 @@ if (_strlen(str) % 2 == 0)
 j = _strlen(str);
 else
 j = _strlen(str) - 1;
-for (i = j; i < _strlen(str); i++)
+for (i = j / 2; i < _strlen(str); i++)
 {
 _putchar(str[i]);
 }
