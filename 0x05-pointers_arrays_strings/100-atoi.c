@@ -23,10 +23,11 @@ int _atoi(char *s)
       if(s[j] == '-'){
 	signo = (signo * -1);
       }
-	while (s[j] >= 48 && s[j] <= 57)
+	while (s[j] >= '0' && s[j] <= '9')
 	{
 	 flag = true;
 	 res = (res * 10) + (s[j] - '0');
+	 j++;
 	}
 
 	if (flag){
