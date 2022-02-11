@@ -13,7 +13,7 @@ char *_strcpy(char *dest, char *src)
 int i, n;
 char str;
 i = (_strlen(src) - 1);
-if (i != 0)
+if (i >= 0)
 {  
 for (n = 0; n <= i; n++)
 {
