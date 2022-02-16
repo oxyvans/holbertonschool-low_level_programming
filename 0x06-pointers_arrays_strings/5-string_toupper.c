@@ -2,13 +2,13 @@
 
 /**
  * string_toupper - comp two strings
- * @ : chars
+ * @a : chars
  *
  *
  * Return: string
  */
 
-char *string_toupper(char * a)
+char *string_toupper(char *a)
 {
 int i;
 char aux;
