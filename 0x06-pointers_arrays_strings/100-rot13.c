@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * string_toupper - comp two strings
- * @ : chars
+ * rot13 - rot 13
+ * @a : chars
  *
  *
  * Return: string
