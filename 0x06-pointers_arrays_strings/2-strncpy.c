@@ -2,7 +2,7 @@
 
 /**
  * _strncpy - concatenates two strings
- * @dest : input 
+ * @dest : input
  * @src : input
  * @n : input
  * Return: dest
