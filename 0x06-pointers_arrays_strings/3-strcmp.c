@@ -2,7 +2,7 @@
 
 /**
  * _strcmp - comp two strings
- * @s2 : chars
+ * @s1 : chars
  * @s2 : chars
  *
  * Return: comp
@@ -11,17 +11,23 @@
 int _strcmp(char *s1, char *s2)
 {
 int i, j;
-for (i = 0; s1[i] != '\0'; i++)
+i = 0;
+while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
 {
+i++;
 }
-for (j = 0; s2[j] != '\0'; j++)
+if ((s1[i] == '\0') && (s2[i] == '\0'))
 {
+return (0);
 }
-if (i == j)
-	return (0);
 else
-	if (i > j)
-		return (15);
-	else
-		return (-15);
+{
+if (s1[i] != s2[i])
+{
+j = s1[i] - s2[i];
+return (j);
+}
+else
+return (0);
+}
 }
