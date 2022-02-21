@@ -16,12 +16,11 @@ while (*s)
 	}
 	else
 	{
-	if (*s == '\0')
-	{
-		return (0);
-	}
-	}
 	s++;
+	}
 }
+if (*s == '\0')
+return (0);
+else
 return (s);
 }
