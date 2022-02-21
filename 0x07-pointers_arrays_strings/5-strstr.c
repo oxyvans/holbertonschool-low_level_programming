@@ -2,8 +2,11 @@
 
 /**
  * _strstr - man
+ * compare - static
  * @needle : pointer
  * @haystack : pointer
+ * @X : x
+ * @Y : y
  * Return: char
  */
 
@@ -25,7 +28,9 @@ int compare(const char *X, const char *Y)
 
 char *_strstr(char *haystack, char *needle)
 {
-    while (*haystack != '\0')
+	if (needle[0] == '\0')
+		return (haystack);
+	 while (*haystack != '\0')
     {
         if ((*haystack == *needle) && compare(haystack, needle)) {
             return haystack;
