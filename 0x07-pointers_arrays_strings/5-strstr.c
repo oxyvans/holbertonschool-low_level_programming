@@ -12,7 +12,7 @@ int i = 0, j, flag = 0;
 if (needle[0] == '\0')
 return (haystack);
 
-while (*haystack)
+while (*haystack != '\0')
 {
 	for (j = 0; needle[j] != '\0'; j++)
 	if (haystack[i] == needle[j])
