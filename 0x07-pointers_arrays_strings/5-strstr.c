@@ -6,31 +6,32 @@
  * @haystack : pointer
  * Return: char
  */
+
+
+int compare(const char *X, const char *Y)
+{
+    while (*X && *Y)
+    {
+        if (*X != *Y) {
+            return 0;
+        }
+ 
+        X++;
+        Y++;
+    }
+ 
+    return (*Y == '\0');
+}
+
 char *_strstr(char *haystack, char *needle)
 {
-int i = 0, j, flag = 0;
-if (needle[0] == '\0')
-return (haystack);
-
-while (*haystack != '\0')
-{
-	for (j = 0; needle[j] != '\0'; j++)
-	if (haystack[i] == needle[j])
-	{
-		flag = 1;
-		i++;
-	}
-	else
-	{
-		flag = 0;
-		i = 0;
-	}
-	if (flag == 1)
-	break;
-haystack++;
-}
-if (flag == 1)
-return (haystack);
-else
-return ('\0');
+    while (*haystack != '\0')
+    {
+        if ((*haystack == *needle) && compare(haystack, needle)) {
+            return haystack;
+        }
+        haystack++;
+    }
+ 
+    return NULL;
 }
