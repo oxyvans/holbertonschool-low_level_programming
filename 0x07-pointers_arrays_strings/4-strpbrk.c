@@ -25,6 +25,9 @@ while(*s)
 	break;
 s++;
 }
+if (flag == 1)
 return (s);
+else
+return (0);
 }
 
