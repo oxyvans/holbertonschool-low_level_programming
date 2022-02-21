@@ -32,5 +32,5 @@ haystack++;
 if (flag == 1)
 return (haystack);
 else
-return (0);
+return ('\0');
 }
