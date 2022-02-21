@@ -15,7 +15,7 @@ while (*s)
 	else
 		s++;
 }
-if (s == NULL)
+if (*s == NULL)
 	return (0);
 else 
 return (s);
