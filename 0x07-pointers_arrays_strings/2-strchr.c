@@ -8,7 +8,6 @@
  */
 char *_strchr(char *s, char c)
 {
-assert(s != NULL);
 while (*s)
 {
 	if (*s == c)
@@ -16,5 +15,5 @@ while (*s)
 	else
 		s++;
 }
-return (0);
+return ('\0');
 }
