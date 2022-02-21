@@ -7,7 +7,6 @@
  */
 char *_strchr(char *s, char c)
 {
-if (s != NULL)
 while (*s)
 {
 	if (*s == c)
@@ -15,5 +14,5 @@ while (*s)
 	else
 		s++;
 }
-return NULL;
+return (0);
 }
