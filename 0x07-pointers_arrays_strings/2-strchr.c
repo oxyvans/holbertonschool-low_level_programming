@@ -14,10 +14,7 @@ while (*s)
 	{
 		return (s);
 	}
-	else
-	{
 	s++;
-	}
 }
 if (*s == '\0')
 return (0);
