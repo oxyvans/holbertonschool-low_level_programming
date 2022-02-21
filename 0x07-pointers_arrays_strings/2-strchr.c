@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr - n 
+ * _strchr - n
  * @s : pointer
  * @c : char
  * Return: char
@@ -9,10 +9,10 @@ char *_strchr(char *s, char c)
 {
 while (*s)
 {
-	if (*s == c)
-		return s;
-	else
-		s++;
+if (*s == c)
+return (s);
+else
+s++;
 }
 return (0);
 }
