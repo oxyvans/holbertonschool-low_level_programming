@@ -18,10 +18,10 @@ while (*s)
 	{
 		s++;
 	}
-	if (s == NULL)
+	if (s == '\0')
 	{
 		return (0);
 	}
 }
-return (0);
+return (0)
 }
