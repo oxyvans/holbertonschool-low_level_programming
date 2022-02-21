@@ -16,7 +16,7 @@ while (*s)
 	}
 	s++;
 }
-if (*s == '\0')
+if (*s != '\0')
 return (0);
 else
 return (s);
