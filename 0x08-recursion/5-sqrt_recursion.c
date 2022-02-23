@@ -12,7 +12,7 @@
 int aux(int n, int i, int original)
 {
 if (n == 1)
-	return (-1);
+	return (1);
 if (n % 2 == 0)
 	n = original - 1;
 i = n / 2;
