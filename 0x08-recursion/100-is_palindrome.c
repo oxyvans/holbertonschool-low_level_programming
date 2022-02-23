@@ -11,17 +11,17 @@
 
 int aux(int size, int i, char *s)
 {
-if ( i >= size / 2)
+if (i >= size / 2)
 	return (1);
 if (s[i] == s[size])
 {
-	return (aux(size -1, i + 1, s));
+	return (aux(size - 1, i + 1, s));
 }
 return (0);
 }
 
 /**
- * is_polindrome - main
+ * is_palindrome - main
  * @s : char
  * Return: int
  */
@@ -31,7 +31,7 @@ int is_palindrome(char *s)
 int size = _strlen_recursion(s);
 if (size == 0 || size == 1)
 	return (1);
-return (aux(size - 1, 0, s));
+return (aux(size, 0, s));
 
 
 }
