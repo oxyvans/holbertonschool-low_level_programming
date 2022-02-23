@@ -31,5 +31,5 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 	return (-1);
-return (aux(n, n, n));
+return (aux(n, n, n / 2));
 }
