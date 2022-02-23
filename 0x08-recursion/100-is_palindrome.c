@@ -11,7 +11,7 @@
 
 int aux(int size, int i, char *s)
 {
-if (i >= size / 2)
+if (i > size / 2)
 	return (1);
 if (s[i] == s[size])
 {
