@@ -5,13 +5,14 @@
  * aux - main
  * @size : int
  * @i : int
+ * @ss : int
  * @s : char;
  * Return: int
  */
 
-int aux(int size, int i, char *s)
+int aux(int size, int ss, int i, char *s)
 {
-if (i > size / 2)
+if (i > ss / 2)
 	return (1);
 if (s[i] == s[size])
 {
@@ -31,7 +32,7 @@ int is_palindrome(char *s)
 int size = _strlen_recursion(s) - 1;
 if (size == 0 || size == 1)
 	return (1);
-return (aux(size, 0, s));
+return (aux(size, 0, s, size));
 
 
 }
