@@ -16,7 +16,7 @@ if (n == rx2)
 if (n > (rx2 / 2))
 {
 	r = r + 1;
-	return (aux(n, r , r * r));
+	return (aux(n, r, r * r));
 }
 return (-1);
 }
@@ -31,5 +31,5 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 	return (-1);
-return (aux(n ,0 , 0));
+return (aux(n, 0, 0));
 }
