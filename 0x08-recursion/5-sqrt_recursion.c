@@ -3,20 +3,22 @@
 /**
  * aux - main
  * @n : int
- * @i : int
- * @original : origin
+ * @r : int
+ * @rx2 : origin
  * Return: int
  */
 
 
-int aux(int n, int i, int original)
+int aux(int n, int r, int rx2)
 {
-if (n == 1)
-	return (-1);
-i = n / 2;
-if ((i *i) == original)
-	return (i);
-return (aux(n - 2, i, original));
+if (n == rx2)
+	return (r);
+if (n > (rx2 / 2))
+{
+	r = r + 1;
+	return (aux(n, r , r * r));
+}
+return (-1);
 }
 
 /**
@@ -29,7 +31,5 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 	return (-1);
-if (n == 1)
-	return (1);
-return (aux(n, n, n));
+return (aux(n ,0 , 0));
 }
