@@ -16,7 +16,7 @@ if (i > ss / 2)
 	return (1);
 if (s[i] == s[size])
 {
-	return (aux(size - 1, i + 1, s));
+	return (aux(size - 1, ss, i + 1, s));
 }
 return (0);
 }
