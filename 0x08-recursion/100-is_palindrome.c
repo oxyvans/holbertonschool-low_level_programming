@@ -3,14 +3,15 @@
 
 /**
  * aux - main
- * @n : int
- * @s : int
+ * @size : int
+ * @i : int
+ * @s : char;
  * Return: int
  */
 
 int aux(int size, int i, char *s)
 {
-if ( i > size / 2)
+if ( i >= size / 2)
 	return (1);
 if (s[i] == s[size])
 {
@@ -21,7 +22,7 @@ return (0);
 
 /**
  * is_polindrome - main
- * @i : char
+ * @s : char
  * Return: int
  */
 
