@@ -31,6 +31,8 @@ int is_palindrome(char *s)
 int size = _strlen_recursion(s);
 if (size == 0 || size == 1)
 	return (1);
+if (size % 2 != 0)
+	size = size - 1; 
 return (aux(size, 0, s));
 
 
