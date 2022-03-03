@@ -12,43 +12,31 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *res;
-	unsigned int i = 0, j, size1 = 0, size2 = 0;
+	unsigned int i = 0, j, s1_len, s2_len;
+	char *aux;
 
-	if (s1 != NULL)
-	{
-		for (size1 = 0; s1[size1] != '\0'; size1++)
-		{
-		}
-	}
+	s1_len = strlen(s1);
+	s2_len = strlen(s2);
 
-	if (s2 != NULL)
-	{
-		for (size2 = 0; s2[size2] != '\0'; size2++)
-		{	
-		}
-	}
-
-	if (n < size2)
-		size2 = n;
-
-	res = malloc((size1 + size2 + 1) * sizeof(char));
-
-	if (res == NULL)
+	if (n < s2_len + 1)
+		aux = malloc(sizeof(char) * (s1_len + n + 1));
+	else
+		aux = malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (aux == NULL)
 		return (NULL);
 
 	if (s1 != NULL)
 		for (i = 0; s1[i] != '\0'; i++)
-		{
-			res[i] = s1[i];
-		}
-
+			aux[i] = s1[i];
 	if (s2 != NULL)
-		for (j = 0; j <= size2; i++, j++)
-		{
-			res[i] = s2[j];
-		}
-
-	res[0] = '\0'; 
-	return (res);
+	{
+		if (n < s2_len)
+			for (j = 0; j < n; j++, i++)
+				aux[i] = s2[j];
+		else
+			for (j = 0; s2[j] != '\0'; j++, i++)
+				aux[i] = s2[j];
+	}
+	aux[i] = '\0';
+	return (aux);
 }
