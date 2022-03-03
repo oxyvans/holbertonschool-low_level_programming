@@ -33,7 +33,7 @@ int *array_range(int min, int max)
 	j = 0;
 	for (i = min; i <= max; i++)
 	{
-		mal[j] = i;
+		p[j] = i;
 		if (j < l)
 		j++;
 	}
