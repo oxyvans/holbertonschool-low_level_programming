@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * calloc - main
+ * _calloc - main
  * @nmemb : int
  * @size : size
+ * Return: p
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
