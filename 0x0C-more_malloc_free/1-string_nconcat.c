@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 
 	if (s2 != NULL)
-		for (j = 0; j < size2; i++, j++)
+		for (j = 0; j <= size2; i++, j++)
 		{
 			res[i] = s2[j];
 		}
