@@ -5,6 +5,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/**
+ * struct format - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ */
+
 typedef struct format
 {
 	char *op;
