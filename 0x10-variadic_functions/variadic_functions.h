@@ -15,12 +15,16 @@
 typedef struct format
 {
 	char *op;
-	int (*f)(va_list);
+	void (*f)(va_list);
 } Tformat;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+void printC(va_list c);
+void printI(va_list i);
+void printF(va_list f);
+void printS(va_list s);
 
 #endif /* MAIN_H */

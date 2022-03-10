@@ -6,9 +6,9 @@
  *
  */
 
-void printC(char c)
+void printC(va_list c)
 {
-	printf("%c", c);
+	printf("%c", va_arg(c, int));
 }
 
 /**
@@ -17,9 +17,9 @@ void printC(char c)
  *
  */
 
-void printI(int i)
+void printI(va_list i)
 {
-	printf("%d", i);
+	printf("%d", va_arg(i, int));
 }
 
 /**
@@ -28,9 +28,9 @@ void printI(int i)
  *
  */
 
-void printF(double f)
+void printF(va_list f)
 {
-	printf("%f", f);
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -39,12 +39,13 @@ void printF(double f)
  *
  */
 
-void printS(char *s)
+void printS(va_list s)
 {
-	if (s == NULL)
+	char * aux = va_arg(s,char *);
+	if (aux == NULL)
 		printf("(nul)");
 	else
-		printf("%s", str);
+		printf("%s", aux);
 }
 
 /**
@@ -62,6 +63,26 @@ void print_all(const char * const format, ...)
 		{"f", printF},
 		{"s", printS},
 		{NULL, NULL}
-		};
+	};
+
+	int i = 0, j = 0;
+	va_list aux;
+	va_start(aux, format);
+
+	while (form[i].op != NULL)	
+	{
+		while (format[j] != '\0')
+		{	
+			if (format[j] == *form[i].op)
+			{
+				form[i].f(aux);
+			}	
+		}
+
+		j = 0;
+
+	}
+
+
 
 }
