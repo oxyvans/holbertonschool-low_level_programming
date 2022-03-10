@@ -72,6 +72,7 @@ void print_all(const char * const format, ...)
 	va_start(aux, format);
 	while (format != NULL && format[i] != '\0')
 	{
+		j = 0;
 		while (form[j].op)
 		{
 			if (format[i] == *form[j].op)
@@ -85,8 +86,6 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		j = 0;
-
 	}
 	va_end(aux);
 	printf("\n");
