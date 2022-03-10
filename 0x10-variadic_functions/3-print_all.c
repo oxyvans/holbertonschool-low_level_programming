@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <string.h>
 
 /**
  * printC - print c
@@ -44,9 +45,8 @@ void printS(va_list s)
 	char *aux = va_arg(s, char *);
 
 	if (aux == NULL)
-		printf("(nul)");
-	else
-		printf("%s", aux);
+		aux = "(nill)";
+	printf("%s", aux);
 }
 
 /**
