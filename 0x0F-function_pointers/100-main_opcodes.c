@@ -10,6 +10,9 @@
 
 int main(int argc, char *argv[])
 {
+	char *p_main;
+	int bytes, i = 0i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -20,6 +23,18 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(2);
+	}
+
+	p_main = (char *)&main;
+	bytes = atoi(argv[1]);
+
+	while (i < bytes)
+	{
+		if (i != bytes - 1)
+			printf("%02hhx ", p_main[i]);
+		else
+			printf("%02hhx\n", p_main[i]);
+		i++;
 	}
 
 	return (0);
