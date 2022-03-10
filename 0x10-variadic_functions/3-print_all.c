@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <string.h>
 
 /**
  * printC - print c
@@ -41,7 +42,8 @@ void printF(va_list f)
 
 void printS(va_list s)
 {
-	char * aux = va_arg(s,char *);
+	char *aux = va_arg(s, char *);
+
 	if (aux == NULL)
 		printf("(nul)");
 	else
@@ -49,9 +51,8 @@ void printS(va_list s)
 }
 
 /**
- * print_strings - print
- * @separator : separador
- * @n : int
+ * print_all - print
+ * @format : format
  *
  **/
 
@@ -67,15 +68,18 @@ void print_all(const char * const format, ...)
 
 	int i = 0, j = 0;
 	va_list aux;
-	va_start(aux, format);
 
+	va_start(aux, format);
 	while (format != NULL && format[i] != '\0')
-	{	
-		while(form[j].op)
+	{
+		while (form[j].op)
 		{
 			if (format[i] == *form[j].op)
 			{
 				form[j].f(aux);
+
+				if ((int)strlen(format) - 1 != i)
+					printf(", ");
 			}
 
 			j++;
