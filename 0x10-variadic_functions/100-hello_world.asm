@@ -8,7 +8,7 @@ main:
    mov	eax,4
    int	0x80
 
-   mov	eax,1
+   mov	eax,0
    int	0x80
 
 	section	.data
