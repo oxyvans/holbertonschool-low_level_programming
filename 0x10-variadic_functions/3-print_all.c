@@ -79,6 +79,7 @@ void print_all(const char * const format, ...)
 				printf("%s", sep);
 				form[j].f(aux);
 				sep = ", ";
+				break;
 			}
 
 			j++;
