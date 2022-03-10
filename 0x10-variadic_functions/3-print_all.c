@@ -68,6 +68,7 @@ void print_all(const char * const format, ...)
 
 	int i = 0, j = 0;
 	va_list aux;
+	char *sep = "";
 
 	va_start(aux, format);
 	while (format != NULL && format[i] != '\0')
@@ -76,10 +77,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *form[j].op)
 			{
+				printf("%s", sep);
 				form[j].f(aux);
-
-				if ((int)strlen(format) - 1 != i)
-					printf(", ");
+				sep = ", ";
 			}
 
 			j++;
