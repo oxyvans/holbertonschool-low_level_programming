@@ -69,20 +69,21 @@ void print_all(const char * const format, ...)
 	va_list aux;
 	va_start(aux, format);
 
-	while (form[i].op != NULL)	
-	{
-		while (format[j] != '\0')
-		{	
-			if (format[j] == *form[i].op)
+	while (format != NULL && format[i] != '\0')
+	{	
+		while(form[j].op)
+		{
+			if (format[i] == *form[j].op)
 			{
-				form[i].f(aux);
-			}	
-		}
+				form[j].f(aux);
+			}
 
+			j++;
+		}
+		i++;
 		j = 0;
 
 	}
-
-
-
+	va_end(aux);
+	printf("\n");
 }
