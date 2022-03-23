@@ -36,7 +36,7 @@ listint_t *find_listint_loop(listint_t *head)
 	if (head == NULL)
 		return (NULL);
 
-	if (detectLoop(head))
+	if (!detectLoop(head))
 	{
 		return (NULL);
 	}
