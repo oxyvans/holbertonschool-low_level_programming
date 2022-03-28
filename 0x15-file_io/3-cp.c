@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * aux - main
+ * error_ - main
  * @argv1 : char
  * @argv2 : char
  * @r: int
