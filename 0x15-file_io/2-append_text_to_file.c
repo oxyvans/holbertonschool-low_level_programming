@@ -33,8 +33,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	o = write(fd, text_content, i);
 
 	if (o != i)
+	{
 		close(fd);
 		return (0);
+	}
 
 	close(fd);
 	return (1);
