@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * create_file - main
+ * append_text_to_file - main
  * @filename: char
  * @text_content: size
  * Return: int
  **/
-
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	ssize_t o, fd, i = 0;
 
