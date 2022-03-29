@@ -4,9 +4,10 @@
 * main - main
 * @argc: int
 * @argv: char
+* Return: 0
 */
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	*argv = *argv;
 
@@ -15,4 +16,5 @@ void main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "stderr\n");
 		exit(98);
 	}
+	return (0);
 }
